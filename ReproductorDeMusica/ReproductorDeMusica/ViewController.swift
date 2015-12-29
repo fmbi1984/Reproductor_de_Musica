@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        selectOption1()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,23 +72,41 @@ class ViewController: UIViewController {
         case 5: selectOption5()
         default: print("No valid!")
         }
+        if !reproductor.playing {
+            reproductor.play()
+        }
     }
     
     
     @IBAction func option1() {
         selectOption1()
+        if !reproductor.playing {
+            reproductor.play()
+        }
     }
     @IBAction func option2() {
         selectOption2()
+        if !reproductor.playing {
+            reproductor.play()
+        }
     }
     @IBAction func option3() {
         selectOption3()
+        if !reproductor.playing {
+            reproductor.play()
+        }
     }
     @IBAction func option4() {
         selectOption4()
+        if !reproductor.playing {
+            reproductor.play()
+        }
     }
     @IBAction func option5() {
         selectOption5()
+        if !reproductor.playing {
+            reproductor.play()
+        }
     }
     
     func selectOption1() {
@@ -190,6 +208,8 @@ class ViewController: UIViewController {
             
             myTitle.text = "David Guetta - Titanium"
             myImage.image = UIImage(named: "DavidGuettaTitanium.jpg")
+            
+            
         } catch
         {
             print ("Error al cargar el archivo de sonido")
